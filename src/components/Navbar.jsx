@@ -25,11 +25,12 @@ export const Navbar = () => {
             className={cn(
                 'fixed w-full z-40 transition-all duration-300',
                 isScrolled
-                    ? 'py-3 bg-background/80 backdrop-blur-md shadow-xs'
-                    : 'py-5'
+                    ? 'py-5 bg-background/80 backdrop-blur-md shadow-xs'
+                    : 'py-5 '
             )}
+            ç
         >
-            <div className="container flex items-center justify-between pr-10">
+            <div className="container flex items-center justify-between pr-15">
                 <a
                     className="text-xl font-bold text-primary flex items-center"
                     href="#hero"
