@@ -8,12 +8,13 @@ const navItems = [
     { name: 'Contact', href: '#soonToCome' },
 ];
 import { X, Menu } from 'lucide-react';
+
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.screenY > 10);
+            setIsScrolled(window.scrollY > 10);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -28,7 +29,7 @@ export const Navbar = () => {
                     : 'py-5'
             )}
         >
-            <div className="container flex items-center justify-between">
+            <div className="container flex items-center justify-between pr-16">
                 <a
                     className="text-xl font-bold text-primary flex items-center"
                     href="#hero"
