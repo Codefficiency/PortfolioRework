@@ -29,7 +29,7 @@ export const Navbar = () => {
                     : 'py-5'
             )}
         >
-            <div className="container flex items-center justify-between pr-16">
+            <div className="container flex items-center justify-between pr-10">
                 <a
                     className="text-xl font-bold text-primary flex items-center"
                     href="#hero"

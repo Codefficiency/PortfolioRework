@@ -2,20 +2,30 @@ import { defineConfig } from 'tailwindcss';
 
 export default defineConfig({
     darkMode: 'class',
-
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-
+    safelist: [
+        'pr-16',
+        'z-40',
+        'z-50',
+        'fixed',
+        'top-3',
+        'right-5',
+        'max-sm:hidden',
+        'backdrop-blur-md',
+        'bg-background/80',
+        'bg-background/95',
+        'text-glow',
+        'shadow-xs',
+    ],
     theme: {
         extend: {
             colors: {
                 border: 'hsl(var(--border) / <alpha-value>)',
                 background: 'hsl(var(--background) / <alpha-value>)',
                 foreground: 'hsl(var(--foreground) / <alpha-value>)',
-
                 primary: 'hsl(var(--primary) / <alpha-value>)',
                 'primary-foreground':
                     'hsl(var(--primary-foreground) / <alpha-value>)',
-
                 card: 'hsl(var(--card) / <alpha-value>)',
             },
             animation: {
@@ -55,6 +65,5 @@ export default defineConfig({
             },
         },
     },
-
     plugins: [],
 });
