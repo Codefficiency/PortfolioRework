@@ -90,6 +90,7 @@
     }
 
     * {
+        caret-color: transparent;
         @apply border-border;
     }
 
@@ -100,6 +101,18 @@
     body {
         @apply bg-background text-foreground transition-colors duration-300;
         font-feature-settings: 'rlig' 1, 'calt';
+    }
+
+    html,
+    body {
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
     }
 }
 
