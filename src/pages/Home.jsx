@@ -19,7 +19,7 @@ export const Home = () => {
             <main>
                 <HeroSection />
                 <AboutSection />
-                {/* <SkillSection /> */}
+                <SkillSection />
                 <ProjectsSection />
                 {/* */}
                 <SoonToCome />
