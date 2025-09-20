@@ -21,6 +21,6 @@ jobs:
                   node-version: 20
                   cache: npm
             - name: Install dependencies
-            - run: npm install
-            - name: Run Lint
-            - run: npm run Lint
+              run: npm install
+            - name: Run lint
+              run: npm run Lint
