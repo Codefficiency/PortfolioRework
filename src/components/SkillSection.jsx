@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Info } from 'lucide-react';
 const skills = [
     // Front End
     { name: 'HTML/CSS', level: 95, category: 'frontend' },
@@ -22,7 +23,7 @@ const skills = [
 const categories = ['all', 'frontend', 'backend', 'tools'];
 export const SkillSection = () => {
     const [activeCategory, setActiveCategory] = useState('all');
-
+    const [showNote, setShowNote] = useState(false);
     const filteredSkills = skills.filter(
         (skill) => activeCategory === 'all' || skill.category === activeCategory
     );
@@ -31,6 +32,24 @@ export const SkillSection = () => {
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
                     My <span className="text-primary"> Skills </span>
+                    <button
+                        onMouseEnter={() => setShowNote(true)}
+                        onMouseLeave={() => setShowNote(false)}
+                        className="relative"
+                    >
+                        <Info className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                        <div
+                            className={cn(
+                                'absolute left-full -translate-x-1/2 mt-1 w-max bg-card',
+                                'text-sm text-foreground px-3 py-2 rounded-md shadow-lg border z-10 transition-all duration-300',
+                                showNote
+                                    ? 'opacity-100 translate-y-0'
+                                    : 'opacity-0 translate-y-1 pointer-events-none'
+                            )}
+                        >
+                            Note: Skills will be reworked soon!
+                        </div>
+                    </button>
                 </h2>
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {categories.map((category, key) => (
