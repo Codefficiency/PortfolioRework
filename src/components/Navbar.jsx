@@ -1,9 +1,9 @@
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
 const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
+    { name: 'Skills', href: '#soonToCome' },
     { name: 'Projects', href: '#soonToCome' },
     { name: 'Contact', href: '#soonToCome' },
 ];

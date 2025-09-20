@@ -1,6 +1,6 @@
 export const SoonToCome = () => {
     return (
-        <section id="soonToCome" className="py-90 px-8">
+        <section id="soonToCome" className="py-72 px-8">
             <div>
                 <h1 className="text-5xl md:text-6xl text-primary font-bold traacking-tight">
                     Soon To Come
