@@ -1,7 +1,7 @@
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { StarBackground } from '@/components/StarBackground';
 import { Navbar } from '@/components/Navbar';
-import { HeroSection } from '@/components/HeroSection';
+import { HomeSection } from '@/components/HomeSection';
 import { AboutSection } from '@/components/AboutSection';
 import { SoonToCome } from '@/components/SoonToCome';
 import { SkillSection } from '@/components/SkillSection';
@@ -16,9 +16,9 @@ export const Home = () => {
             <Navbar></Navbar>
             {/* Main Content */}
             <main>
-                <HeroSection />
+                <HomeSection />
                 <AboutSection />
-                <SkillSection />
+                {/* <SkillSection /> */}
                 <SoonToCome />
             </main>
             {/*Footer*/}
