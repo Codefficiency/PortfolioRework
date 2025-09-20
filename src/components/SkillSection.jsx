@@ -53,7 +53,7 @@ export const SkillSection = () => {
                     {filteredSkills.map((skill, key) => (
                         <div
                             key={key}
-                            className="bg-card p-6 rounded-lg shadow-xc card-hover"
+                            className="bg-card p-6 rounded-lg shadow-xs card-hover"
                         >
                             <div className="text-left mb-4">
                                 {' '}
