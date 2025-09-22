@@ -1,10 +1,22 @@
-import { Mail, Phone, MapPin, Github, Divide, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Divide, Send, Info } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
 export const ContactSection = () => {
+    const { toast } = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showNote, setShowNote] = useState(false);
     const handleSubmit = (e) => {
-        console.log('Submitted!');
         e.preventDefault();
-        setTimeout(() => {}, 1500);
+        setIsSubmitting(true);
+        setTimeout(() => {
+            toast({
+                title: 'Message sent!',
+                description:
+                    "Thank you for your message! I'll get back to you soon.",
+            });
+            setIsSubmitting(false);
+        }, 1500);
     };
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -76,9 +88,31 @@ export const ContactSection = () => {
                             </div>
                         </div> */}
                     </div>
-                    <div className="bg-card p-8 rounded-lg shadow-xs">
+                    <div
+                        className="bg-card p-8 rounded-lg shadow-xs"
+                        onSubmit={handleSubmit}
+                    >
                         <h3 className="text-2x; font-semibold mb-6">
-                            Send a Message
+                            Send a Message{' '}
+                            <button
+                                onMouseEnter={() => setShowNote(true)}
+                                onMouseLeave={() => setShowNote(false)}
+                                className="relative"
+                            >
+                                <Info className="w-3 h-3 text-muted-foreground hover:text-primary" />
+                                <div
+                                    className={cn(
+                                        'absolute left-full -translate-x-1/2 mt-1 w-max bg-card',
+                                        'text-xs text-foreground px-3 py-2 rounded-md shadow-lg border z-10 transition-all duration-300',
+                                        showNote
+                                            ? 'opacity-100 translate-y-0'
+                                            : 'opacity-0 translate-y-1 pointer-events-none'
+                                    )}
+                                >
+                                    Note: I haven&apos;t setup the email service
+                                    yet!
+                                </div>
+                            </button>
                         </h3>
                         <form className="space-y-6">
                             <div>
@@ -126,12 +160,16 @@ export const ContactSection = () => {
                             </div>
                             <button
                                 type="submit"
+                                disabled={isSubmitting}
                                 className={cn(
-                                    'cosmic-button w-full flex items-center justify-center gap-2'
+                                    'cosmic-button w-full flex items-center justify-center gap-2',
+                                    isSubmitting
+                                        ? 'bg-background/95 text-primary'
+                                        : ''
                                 )}
-                                onClick={handleSubmit}
                             >
-                                Send Message <Send size={16}></Send>
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                                <Send size={16}></Send>
                             </button>
                         </form>
                     </div>
