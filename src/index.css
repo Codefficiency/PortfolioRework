@@ -93,6 +93,10 @@
         caret-color: transparent;
         @apply border-border;
     }
+    input,
+    textarea[contenteditable='true'] {
+        caret-color: auto;
+    }
 
     html {
         @apply scroll-smooth;
