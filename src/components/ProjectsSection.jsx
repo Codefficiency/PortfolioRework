@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, ExternalLink, Github, GithubIcon } from 'lucide-react';
 
 const projects = [
     {
@@ -109,6 +109,7 @@ export const ProjectsSection = () => {
                         target="_blank"
                         href="https://github.com/Codefficiency"
                     >
+                        <GithubIcon size={20} />
                         Check My Github <ArrowRight size={16} />
                     </a>
                 </div>
