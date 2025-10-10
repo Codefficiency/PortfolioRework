@@ -4,14 +4,15 @@ import {
     Box,
     CloudCog,
     Code2,
-    Figma,
     FileJson,
     Flame,
     GitBranch,
     Info,
     Layers,
+    Package,
     Palette,
     Server,
+    Sprout,
 } from 'lucide-react';
 const skills = [
     // Front End
@@ -19,37 +20,38 @@ const skills = [
         name: 'HTML/CSS',
         icon: Code2,
         category: 'frontend',
-        proficiency: 'Expert',
+        proficiency: 'Advanced',
     },
     {
         name: 'JavaScript',
         icon: FileJson,
         category: 'frontend',
-        proficiency: 'Expert',
-    },
-    {
-        name: 'React',
-        icon: Layers,
-        category: 'frontend',
-        proficiency: 'Expert',
-    },
-    {
-        name: 'React Native',
-        icon: Box,
-        category: 'frontend',
-        proficiency: 'Expert',
+        proficiency: 'Advanced',
     },
     {
         name: 'TypeScript',
         icon: FileJson,
         category: 'frontend',
-        proficiency: 'Expert',
+        proficiency: 'Intermediate',
     },
+    {
+        name: 'React',
+        icon: Layers,
+        category: 'frontend',
+        proficiency: 'Advanced',
+    },
+    {
+        name: 'React Native',
+        icon: Box,
+        category: 'frontend',
+        proficiency: 'Advanced',
+    },
+
     {
         name: 'Tailwind CSS',
         icon: Palette,
         category: 'frontend',
-        proficiency: 'Expert',
+        proficiency: 'Intermediate',
     },
 
     // Backend
@@ -57,34 +59,38 @@ const skills = [
         name: 'Node.js',
         icon: Server,
         category: 'backend',
-        proficiency: 'Expert',
+        proficiency: 'Advanced',
     },
     {
         name: 'Express',
         icon: Server,
         category: 'backend',
-        proficiency: 'Expert',
+        proficiency: 'Advanced',
     },
     {
         name: 'Firestore',
         icon: Flame,
         category: 'backend',
-        proficiency: 'Expert',
+        proficiency: 'Intermediate',
     },
-
     //Utils
     {
         name: 'Git/GitHub',
         icon: GitBranch,
         category: 'tools',
-        proficiency: 'Expert',
+        proficiency: 'Intermediate',
     },
-    { name: 'Figma', icon: Figma, category: 'tools', proficiency: 'Expert' },
     {
         name: 'Firebase',
         icon: CloudCog,
         category: 'tools',
-        proficiency: 'Expert',
+        proficiency: 'Advanced',
+    },
+    {
+        name: 'Linear',
+        icon: Package,
+        category: 'tools',
+        proficiency: 'Intermediate',
     },
 ];
 const categories = ['all', 'frontend', 'backend', 'tools'];
@@ -117,7 +123,10 @@ export const SkillSection = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const maxIndex = Math.max(0, filteredSkills.length - cardsPerView);
+    const maxIndex = Math.max(
+        0,
+        Math.ceil(filteredSkills.length / cardsPerView) - 1
+    );
 
     useEffect(() => {
         setCurrentIndex(0);
@@ -221,21 +230,17 @@ export const SkillSection = () => {
                     <>
                         {/* Slideshow Container */}
                         <div
-                            className="relative overflow-hidden rounded-2xl p-6 bg-card shadow-lg border border-border"
+                            className="relative overflow-hidden rounded-2xl p-6 bg-card shadow-lg border border-border lg:max-w-350"
                             onMouseEnter={() => setIsPaused(true)}
                             onMouseLeave={() => setIsPaused(false)}
                         >
                             {/* Cards Container */}
                             <div
-                                className="flex transition-transform duration-700 ease-in-out"
+                                className="flex transition-transform duration-700 ease-in-out w-full"
                                 style={{
                                     transform: `translateX(-${
-                                        currentIndex * (100 / cardsPerView)
+                                        currentIndex * 100
                                     }%)`,
-                                    width: `${
-                                        (filteredSkills.length * 100) /
-                                        cardsPerView
-                                    }%`,
                                 }}
                             >
                                 {filteredSkills.map((skill, index) => {
@@ -243,14 +248,12 @@ export const SkillSection = () => {
                                     return (
                                         <div
                                             key={index}
-                                            className="px-3"
+                                            className="flex-shrink-0 px-3"
                                             style={{
-                                                width: `${
-                                                    100 / filteredSkills.length
-                                                }%`,
+                                                width: `calc(100% / ${cardsPerView})`,
                                             }}
                                         >
-                                            <div className="bg-card p-6 rounded-lg shadow-md card-hover border border-border h-40 flex flex-col items-center justify-center">
+                                            <div className="bg-card p-6 rounded-lg shadow-md card-hover border border-border h-40 flex flex-col items-center justify-center pr-6">
                                                 <IconComponent className="w-12 h-12 text-primary mb-3" />
                                                 <h3 className="font-semibold text-lg text-foreground mb-2 text-center">
                                                     {skill.name}
