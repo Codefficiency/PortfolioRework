@@ -11,9 +11,12 @@ export const ContactSection = () => {
         setIsSubmitting(true);
         setTimeout(() => {
             toast({
-                title: 'Message sent!',
+                // title: 'Message sent!',
+                // description:
+                //     "Thank you for your message! I'll get back to you soon.",
+                title: 'Sorry!',
                 description:
-                    "Thank you for your message! I'll get back to you soon.",
+                    "I haven't setup the email service yet since it is a paid service. Feel free to email me the contents of your message by clicking on my email in the contact information!",
             });
             setIsSubmitting(false);
         }, 1500);
