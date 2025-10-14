@@ -5,7 +5,7 @@ const projects = [
         id: 1,
         title: 'vexo.gg',
         description:
-            'Vexo is a full-stack personal finance platform designed to act as an AI-powered financial adwisor for individuals.',
+            'Vexo is a full-stack personal finance platform I had the opportunity to work on, designed to act as an AI-powered financial advisor for individuals.',
         image: '/projects/vexoSS.png',
         tags: ['React Native', 'Firebase', 'JavaScript'],
         demoUrl: 'https://vexo.gg',
@@ -35,7 +35,7 @@ const projects = [
 export const ProjectsSection = () => {
     return (
         <section id="projects" className="py-24 px-4 relative">
-            <div clasName="container mx-auto max-w-5xl">
+            <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                     {' '}
                     Featured <span className="text-primary"> Projects</span>
@@ -51,7 +51,8 @@ export const ProjectsSection = () => {
                     >
                         Vexo
                     </a>
-                    .
+                    - An experience that started off as an internship which then
+                    turned into co-ownership due to my exceeding performance.
                 </p>
                 {/* Modify the card width at home with 1920px monitor */}
                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
