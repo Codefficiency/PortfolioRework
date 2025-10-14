@@ -1,5 +1,4 @@
 import { Briefcase, Code, User } from 'lucide-react';
-
 export const AboutSection = () => {
     return (
         <section id="about" className="py-24 px-4 relative">
@@ -15,7 +14,7 @@ export const AboutSection = () => {
                             Student{' '}
                         </h3>
                         <p className="text-muted=foreground">
-                            I&apos;ve built and maintained production-ready
+                            I've built and maintained production-ready
                             applications with a focus on building scalable
                             backend systems and intuitive mobile/web interfaces
                             with my experience through many frameworks and cloud

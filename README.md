@@ -14,6 +14,5 @@ If you are developing a production application, we recommend using TypeScript wi
 ## NOTES
 
 -   Fix mobile menu
--   Add theme switch button
--   Fade away scroll button
--   Fix deployement script
+-   Fade away scroll button 
+-   Footer
