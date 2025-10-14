@@ -5,7 +5,7 @@ const projects = [
         id: 1,
         title: 'vexo.gg',
         description:
-            'Vexo is a full-stack personal finance platform I had the opportunity to work on, designed to act as an AI-powered financial advisor for individuals.',
+            'Vexo is a full-stack personal personal finance platform, designed to act as an AI-powered financial advisor for individuals.',
         image: '/projects/vexoSS.png',
         tags: ['React Native', 'Firebase', 'JavaScript'],
         demoUrl: 'https://vexo.gg',
