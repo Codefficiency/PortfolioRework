@@ -8,9 +8,18 @@ export const HeroSection = () => {
         >
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <div className="space-y-6">
+                    <div className="w-78 h-78 mx-auto overflow-hidden rounded">
+                        <a href="https://ca.linkedin.com/in/ahmet-trk-karaca">
+                            <img
+                                src="/ahmetkaracalinkedin.png"
+                                alt="Ahmet Karaca"
+                                className="w-full h-full object-cover object-[center_top] transition-transform duration-500 group-hover:scale-110"
+                            />
+                        </a>
+                    </div>
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                         <span className="opacity-0 animate-fade-in">
-                            Hi, I'm
+                            Hi, I&apos;m
                         </span>
                         <span className="text-primary opacity-0 animate-fade-in-delay-1">
                             {' '}

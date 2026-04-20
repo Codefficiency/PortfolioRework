@@ -5,32 +5,32 @@ const projects = [
         id: 1,
         title: 'vexo.gg',
         description:
-            'Vexo is a full-stack personal personal finance platform, designed to act as an AI-powered financial advisor for individuals.',
+            'This project represents my growth into a full-stack developer working on production-level systems. Vexo is a personal finance platform designed to act as an AI-powered financial advisor, where I contributed to backend architecture, API design, and secure data handling. This experience shows my ability to build scalable systems and work in a real startup environment.',
         image: '/projects/vexoSS.png',
         tags: ['React Native', 'Firebase', 'JavaScript'],
         demoUrl: 'https://vexo.gg',
         githubUrl: 'https://github.com/VexoLabs/vexo-app',
     },
-    // {
-    //     id: 2,
-    //     title: 'vexo.gg',
-    //     description:
-    //         'Vexo is a full-stack personal finance platform designed to act as an AI-powered financial adwisor for individuals.',
-    //     image: '/projects/vexoGG.png',
-    //     tags: ['React Native', 'Firebase', 'JavaScript', 'OpenAI', 'Plaid'],
-    //     demoUrl: 'vexo.gg',
-    //     githubUrl: 'https://github.com/VexoLabs/vexo-app',
-    // },
-    // {
-    //     id: 3,
-    //     title: 'vexo.gg',
-    //     description:
-    //         'Vexo is a full-stack personal finance platform designed to act as an AI-powered financial adwisor for individuals.',
-    //     image: '/projects/vexoGG.png',
-    //     tags: ['React Native', 'Firebase', 'JavaScript', 'OpenAI', 'Plaid'],
-    //     demoUrl: 'vexo.gg',
-    //     githubUrl: 'https://github.com/VexoLabs/vexo-app',
-    // },
+    {
+        id: 2,
+        title: 'Plant Watering System',
+        description:
+            'This project demonstrates my ability to combine software with real-world problem solving. I built an automated plant watering system that monitors soil conditions and triggers watering based on predefined thresholds. It reflects my interest in building practical systems and integrating logic with hardware, while also reinforcing concepts of automation and efficiency.',
+        image: '/projects/plantWatering.jpg',
+        tags: ['Embedded Systems', 'Automation', 'Sensors'],
+        demoUrl: '#',
+        githubUrl: '#',
+    },
+    {
+        id: 3,
+        title: 'YorkU Schedule Builder',
+        description:
+            'This project showcases my experience working in a team to build a full-stack application. The YorkU Schedule Builder allows students to plan courses, manage schedules, and collaborate with friends. Through this project, I developed skills in backend development, database design, authentication, and working in an agile team environment using Git workflows.',
+        image: '/projects/yorkuSchedule.png',
+        tags: ['React', 'Node.js', 'SQL', 'Full-Stack'],
+        demoUrl: '#',
+        githubUrl: '#',
+    },
 ];
 export const ProjectsSection = () => {
     return (
@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
                     turned into co-ownership due to my exceeding performance.
                 </p>
                 {/* Modify the card width at home with 1920px monitor */}
-                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
                     {projects.map((project, key) => (
                         <div
                             key={key}

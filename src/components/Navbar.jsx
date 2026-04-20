@@ -5,7 +5,9 @@ const navItems = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Career', href: '#career' },
     { name: 'Contact', href: '#contact' },
+
 ];
 import { X, Menu } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Info } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Info, Linkedin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
@@ -31,7 +31,7 @@ export const ContactSection = () => {
 
                 <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
                     Have a project in mind or looking for more members for your
-                    team? Feel free to reach out. I'm always excited to discuss
+                    team? Feel free to reach out. I&apos;m always excited to discuss
                     new opportunities.
                 </p>
 
@@ -47,20 +47,14 @@ export const ContactSection = () => {
                         </a>
                     </div>
 
-                    <div className="flex items-center gap-3">
-                        <Phone className="h-5 w-5 text-primary" />
-                        <a
-                            href="tel:+16474446021"
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                        >
-                            +1 (647) 444-6021
-                        </a>
-                    </div>
 
                     <div className="flex items-center gap-3">
-                        <MapPin className="h-5 w-5 text-primary" />
+                        <Linkedin className="h-5 w-5 text-primary" />
                         <span className="text-muted-foreground">
-                            Toronto, ON, Canada
+                            <a href="https://ca.linkedin.com/in/ahmet-trk-karaca">
+                                Ahmet Karaca on LinkedIn
+                            </a>
+
                         </span>
                     </div>
                 </div>
