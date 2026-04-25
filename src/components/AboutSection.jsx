@@ -139,9 +139,9 @@ export const AboutSection = () => {
 
                         <div className="mt-4 space-y-4 text-muted-foreground leading-7">
                             <div className="w-200 h-100 mx-auto overflow-hidden rounded">
-                                <a href="https://https://github.com/codefficiency">
+                                <a href="https://github.com/codefficiency">
                                     <img
-                                        // src="/Artifact.png"
+                                        src="/Artifact.png"
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </a>
